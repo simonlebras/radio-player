@@ -1,0 +1,209 @@
+[
+  {
+    "description": "Hit Music Only !",
+    "facebook": "http://www.facebook.com/nrjradio",
+    "id": "nrj",
+    "name": "NRJ",
+    "stream": "http://cdn.nrjaudio.fm/audio1/fr/30001/mp3_128.mp3",
+    "twitter": "https://twitter.com/NRJhitmusiconly",
+    "website": "http://www.nrj.fr"
+  },
+  {
+    "description": "RTL bouge",
+    "facebook": "https://www.facebook.com/RTL",
+    "id": "rtl",
+    "name": "RTL",
+    "stream": "http://streaming.radio.rtl.fr/rtl-1-48-192",
+    "twitter": "https://twitter.com/RTLFrance",
+    "website": "http://www.rtl.fr"
+  },
+  {
+    "description": "InterVenez",
+    "facebook": "https://www.facebook.com/franceinter",
+    "id": "france_inter",
+    "name": "France Inter",
+    "stream": "http://direct.franceinter.fr/live/franceinter-midfi.mp3?ID=343zi75tbb",
+    "twitter": "https://twitter.com/franceinter",
+    "website": "http://www.franceinter.fr"
+  },
+  {
+    "description": "Europe 1, Mieux capter son époque",
+    "facebook": "https://www.facebook.com/Europe1",
+    "id": "europe_1",
+    "name": "Europe 1",
+    "stream": "http://e1-live-mp3-128.scdn.arkena.com/europe1.mp3",
+    "twitter": "https://twitter.com/Europe1",
+    "website": "http://www.europe1.fr"
+  },
+  {
+    "description": "Deux points ouvrez l'info",
+    "facebook": "http://www.facebook.com/franceinfo",
+    "id": "france_info",
+    "name": "Franceinfo",
+    "stream": "http://direct.franceinfo.fr/live/franceinfo-midfi.mp3?ID=343zi75tbb",
+    "twitter": "https://twitter.com/franceinfo",
+    "website": "http://www.france-info.fr"
+  },
+  {
+    "description": "Info, talk, sport",
+    "facebook": "https://www.facebook.com/RMCinfo",
+    "id": "rmc",
+    "name": "RMC",
+    "stream": "http://rmc.scdn.arkena.com/rmc.mp3",
+    "twitter": "https://twitter.com/RMCinfo",
+    "website": "http://www.rmc.fr"
+  },
+  {
+    "description": "Écoutez, on est bien ensemble",
+    "facebook": "https://www.facebook.com/FranceBleuParis",
+    "id": "france_bleu_paris",
+    "name": "France Bleu Paris",
+    "stream": "http://direct.francebleu.fr/live/fb1071-midfi.mp3?ID=343zi75tbb",
+    "twitter": "https://twitter.com/FrancebleuParis",
+    "website": "http://www.francebleu.fr/107-1"
+  },
+  {
+    "description": "Rap et R'n'b non stop",
+    "facebook": "https://www.facebook.com/SkyrockFM",
+    "id": "skyrock",
+    "name": "Skyrock",
+    "stream": "http://icecast.skyrock.net/s/natio_mp3_128k",
+    "twitter": "https://twitter.com/SkyrockFM",
+    "website": "http://skyrock.fm"
+  },
+  {
+    "description": "Le Son Dancefloor",
+    "facebook": "https://www.facebook.com/funradioFR",
+    "id": "fun_radio",
+    "name": "Fun Radio",
+    "stream": "http://streaming.radio.funradio.fr/fun-1-48-192",
+    "twitter": "https://twitter.com/funradio_fr",
+    "website": "http://www.funradio.fr"
+  },
+  {
+    "description": "Nostalgie, les plus grandes chansons !",
+    "facebook": "https://fr-fr.facebook.com/radionostalgie",
+    "id": "nostalgie",
+    "name": "Nostalgie",
+    "stream": "http://cdn.nrjaudio.fm/audio1/fr/30601/mp3_128.mp3",
+    "twitter": "https://twitter.com/nostalgiefm",
+    "website": "http://www.nostalgie.fr"
+  },
+  {
+    "description": "Le son Pop-Rock",
+    "facebook": "https://www.facebook.com/rtl2",
+    "id": "rtl2",
+    "name": "RTL2",
+    "stream": "http://streaming.radio.rtl2.fr/rtl2-1-48-192",
+    "twitter": "https://twitter.com/RTL2officiel",
+    "website": "http://www.rtl2.fr"
+  },
+  {
+    "description": "Pop love music",
+    "facebook": "https://fr-fr.facebook.com/cheriefmradio",
+    "id": "cherie_fm",
+    "name": "Chérie FM",
+    "stream": "http://cdn.nrjaudio.fm/audio1/fr/30201/mp3_128.mp3",
+    "twitter": "https://twitter.com/radiocheriefm",
+    "website": "http://www.cheriefm.fr"
+  },
+  {
+    "description": "Le meilleur de la musique",
+    "facebook": "https://www.facebook.com/RFMradio",
+    "id": "rfm",
+    "name": "RFM",
+    "stream": "http://rfm-live-mp3-128.scdn.arkena.com/rfm.mp3",
+    "twitter": "https://twitter.com/RFMFrance",
+    "website": "http://www.rfm.fr"
+  },
+  {
+    "description": "Pop Rock Electro",
+    "facebook": "https://www.facebook.com/VirginRadioOfficiel",
+    "id": "virgin_radio",
+    "name": "Virgin Radio",
+    "stream": "http://vr-live-mp3-128.scdn.arkena.com/virginradio.mp3",
+    "twitter": "https://twitter.com/VirginRadiofr",
+    "website": "http://www.virginradio.fr"
+  },
+  {
+    "description": "La radio officielle du rire",
+    "facebook": "http://www.facebook.com/Rirechansons",
+    "id": "rire_et_chansons",
+    "name": "Rire & Chansons",
+    "stream": "http://cdn.nrjaudio.fm/audio1/fr/30401/mp3_128.mp3",
+    "twitter": "https://twitter.com/rirechansons",
+    "website": "http://www.rireetchansons.fr"
+  },
+  {
+    "description": "France Culture, c'est pour vous !",
+    "facebook": "https://www.facebook.com/France-Culture-83625483348",
+    "id": "france_culture",
+    "name": "France Culture",
+    "stream": "http://direct.franceculture.fr/live/franceculture-midfi.mp3?ID=343zi75tbb",
+    "twitter": "https://twitter.com/franceculture",
+    "website": "http://www.franceculture.fr"
+  },
+  {
+    "description": "Vie moderne, radio classique",
+    "facebook": "https://www.facebook.com/R.Classique",
+    "id": "radio_classique",
+    "name": "Radio Classique",
+    "stream": "http://broadcast.infomaniak.net:80/radioclassique-high.mp3",
+    "twitter": "https://twitter.com/radioclassique",
+    "website": "http://www.radioclassique.fr"
+  },
+  {
+    "description": "Classique mais pas que...",
+    "facebook": "https://www.facebook.com/RadioFranceMusique",
+    "id": "france_musique",
+    "name": "France Musique",
+    "stream": "http://direct.francemusique.fr/live/francemusique-midfi.mp3?ID=343zi75tbb",
+    "twitter": "https://twitter.com/francemusique",
+    "website": "http://www.francemusique.fr"
+  },
+  {
+    "description": "Le Grand Mix !",
+    "facebook": "https://www.facebook.com/LeGrandMix",
+    "id": "radio_nova",
+    "name": "Radio Nova",
+    "stream": "http://broadcast.infomaniak.net:80/radionova-high.mp3",
+    "twitter": "https://twitter.com/laRadioNova",
+    "website": "http://www.novaplanet.com/radionova"
+  },
+  {
+    "description": "Numéro 1 sur la chanson française",
+    "facebook": "https://www.facebook.com/mfmradio",
+    "id": "mfm_radio",
+    "name": "MFM radio",
+    "stream": "http://mfm.ice.infomaniak.ch/mfm-128.mp3",
+    "twitter": "https://twitter.com/mfmradio",
+    "website": "http://mfmradio.fr"
+  },
+  {
+    "description": "Toutes les musiques, une seule radio",
+    "facebook": "https://www.facebook.com/fipradio",
+    "id": "fip",
+    "name": "FIP",
+    "stream": "http://direct.fipradio.fr/live/fip-midfi.mp3?ID=343zi75tbb",
+    "twitter": "https://twitter.com/fipradio",
+    "website": "http://www.fip.fr"
+  },
+  {
+    "description": "Hip Hop, Never stop",
+    "facebook": "https://www.facebook.com/MouvRadio",
+    "id": "mouv",
+    "name": "Mouv’",
+    "stream": "http://direct.mouv.fr/live/mouv-midfi.mp3?ID=343zi75tbb",
+    "twitter": "https://twitter.com/mouv",
+    "website": "http://www.mouv.fr"
+  },
+  {
+    "description": "La France a tout pour réussir",
+    "facebook": "https://www.facebook.com/BFMBusiness",
+    "id": "bfm_business",
+    "name": "BFM Business",
+    "stream": "http://aifae8cah8.lb.vip.cdn.dvmr.fr/bfmbusiness",
+    "twitter": "https://twitter.com/bfmbusinessTV",
+    "website": "http://www.bfmbusiness.com"
+  }
+]
