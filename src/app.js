@@ -129,3 +129,7 @@ vorpal.command('version', 'Print Radio Player version')
 
 // Show prompt.
 player.show();
+
+export {
+  vorpal, player,
+};

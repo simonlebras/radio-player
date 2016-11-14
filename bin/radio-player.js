@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.player = exports.vorpal = undefined;
+
 var _chalk = require('chalk');
 
 var _chalk2 = _interopRequireDefault(_chalk);
@@ -137,3 +142,6 @@ vorpal.command('version', 'Print Radio Player version').action((args, callback) 
 
 // Show prompt.
 player.show();
+
+exports.vorpal = vorpal;
+exports.player = player;
