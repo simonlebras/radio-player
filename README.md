@@ -1,4 +1,4 @@
-#Radio Player
+#Radio Player [![Build Status](https://travis-ci.org/simonlebras/radio-player.svg?branch=master)](https://travis-ci.org/simonlebras/radio-player)
 
 ##Description
 
