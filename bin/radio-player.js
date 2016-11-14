@@ -34,6 +34,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const vorpal = (0, _vorpal2.default)();
 const player = new _player2.default(new _queue2.default(_radios2.default), _players2.default, vorpal);
 
+// Add 'play' command to Vorpal.
 vorpal.command('play [radio]', 'Play radio in the queue').autocomplete({
   data: (input, callback) => {
     callback(player.getRadioIds());
@@ -59,51 +60,61 @@ vorpal.command('play [radio]', 'Play radio in the queue').autocomplete({
   callback();
 });
 
+// Add 'pause' command to Vorpal.
 vorpal.command('pause', 'Pause current radio').action((args, callback) => {
   player.pause(true);
   callback();
 });
 
+// Add 'resume' command to Vorpal.
 vorpal.command('resume', 'Resume current radio').action((args, callback) => {
   player.resume();
   callback();
 });
 
+// Add 'stop' command to Vorpal.
 vorpal.command('stop', 'Stop current radio').action((args, callback) => {
   player.stop();
   callback();
 });
 
+// Add 'reload' command to Vorpal.
 vorpal.command('reload', 'Reload current radio').action((args, callback) => {
   player.reload();
   callback();
 });
 
+// Add 'prev' command to Vorpal.
 vorpal.command('prev', 'Play previous radio in the queue').action((args, callback) => {
   player.prev();
   callback();
 });
 
+// Add 'next' command to Vorpal.
 vorpal.command('next', 'Play next radio in the queue').action((args, callback) => {
   player.next();
   callback();
 });
 
+// Add 'current' command to Vorpal.
 vorpal.command('current', 'Print currently playing radio').action((args, callback) => {
   player.showCurrent();
   callback();
 });
 
+// Add 'radios' command to Vorpal.
 vorpal.command('radios', 'List radios').action((args, callback) => {
   player.listRadios();
   callback();
 });
 
+// Add 'players' command to Vorpal.
 vorpal.command('players', 'List compatible players').action((args, callback) => {
   player.listPlayers();
   callback();
 });
 
+// Add 'info' command to Vorpal.
 vorpal.command('info <radio>', 'Print radio info').autocomplete({
   data: (input, callback) => {
     callback(player.getRadioIds());
@@ -118,9 +129,11 @@ vorpal.command('info <radio>', 'Print radio info').autocomplete({
   callback();
 });
 
+// Add 'version' command to Vorpal.
 vorpal.command('version', 'Print Radio Player version').action((args, callback) => {
   vorpal.log(_chalk2.default.cyan(_package2.default.version));
   callback();
 });
 
+// Show prompt.
 player.show();

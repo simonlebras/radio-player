@@ -1,22 +1,34 @@
-'use strict';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: player.js</title>
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
 
-var _os = require('os');
+<body>
 
-var _os2 = _interopRequireDefault(_os);
+<div id="main">
 
-var _chalk = require('chalk');
+    <h1 class="page-title">Source: player.js</h1>
 
-var _chalk2 = _interopRequireDefault(_chalk);
+    
 
-var _playSound = require('play-sound');
 
-var _playSound2 = _interopRequireDefault(_playSound);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import os from 'os';
+import chalk from 'chalk';
+import playSound from 'play-sound';
 
 /** Default delimiter */
 const baseDelimiter = 'radio-player';
@@ -56,14 +68,14 @@ class Player {
       throw new Error('No radio playing');
     }
 
-    if (typeof player !== 'undefined' && !this.isPlayerValid(player)) {
+    if (typeof player !== 'undefined' &amp;&amp; !this.isPlayerValid(player)) {
       throw new Error('Invalid player');
     }
 
     this.pause(false);
 
     const radioStream = this.getCurrentRadio().stream;
-    this.audio = (0, _playSound2.default)({ players: this.players, player }).play(radioStream);
+    this.audio = playSound({ players: this.players, player }).play(radioStream);
 
     this.playing = true;
 
@@ -74,7 +86,7 @@ class Player {
    * Resume the current radio.
    */
   resume() {
-    if (!this.playing && this.queue.isIndexValid(this.queue.currentIndex)) {
+    if (!this.playing &amp;&amp; this.queue.isIndexValid(this.queue.currentIndex)) {
       this.play();
     }
   }
@@ -182,14 +194,14 @@ class Player {
   listRadios() {
     this.queue.radios.forEach((radio, index) => {
       const params = {
-        index: _chalk2.default.white(index + 1),
-        name: _chalk2.default.cyan(radio.name),
-        id: _chalk2.default.gray(`${ radio.id }`),
-        description: _chalk2.default.green(`   ${ radio.description }`)
+        index: chalk.white(index + 1),
+        name: chalk.cyan(radio.name),
+        id: chalk.gray(`${radio.id}`),
+        description: chalk.green(`   ${radio.description}`),
       };
 
-      this.vorpal.log(`${ params.index }. ${ params.name } [${ params.id }]`);
-      this.vorpal.log(`${ params.description }`);
+      this.vorpal.log(`${params.index}. ${params.name} [${params.id}]`);
+      this.vorpal.log(`${params.description}`);
     });
   }
 
@@ -199,11 +211,11 @@ class Player {
   listPlayers() {
     this.players.forEach((player, index) => {
       const params = {
-        index: _chalk2.default.white(index + 1),
-        player: _chalk2.default.cyan(player)
+        index: chalk.white(index + 1),
+        player: chalk.cyan(player),
       };
 
-      this.vorpal.log(`${ params.index }. ${ params.player } `);
+      this.vorpal.log(`${params.index}. ${params.player} `);
     });
   }
 
@@ -234,7 +246,7 @@ class Player {
     if (typeof radio !== 'undefined') {
       this.showRadio(this.queue.currentIndex);
     } else {
-      this.vorpal.log(_chalk2.default.red('No radio playing'));
+      this.vorpal.log(chalk.red('No radio playing'));
     }
   }
 
@@ -246,29 +258,29 @@ class Player {
     const radio = this.queue.getRadio(index);
 
     const params = {
-      index: _chalk2.default.white(index + 1),
-      name: _chalk2.default.cyan(radio.name),
-      id: _chalk2.default.gray(`${ radio.id }`),
-      description: `${ _chalk2.default.green('   Description:') } ${ _chalk2.default.grey(radio.description) }`,
-      website: `${ _chalk2.default.green('   Website:') } ${ _chalk2.default.grey(radio.website) }`,
-      facebook: `${ _chalk2.default.green('   Facebook:') } ${ _chalk2.default.grey(radio.facebook) }`,
-      twitter: `${ _chalk2.default.green('   Twitter:') } ${ _chalk2.default.grey(radio.twitter) }`,
-      stream: `${ _chalk2.default.green('   Stream:') } ${ _chalk2.default.grey(radio.stream) }`
+      index: chalk.white(index + 1),
+      name: chalk.cyan(radio.name),
+      id: chalk.gray(`${radio.id}`),
+      description: `${chalk.green('   Description:')} ${chalk.grey(radio.description)}`,
+      website: `${chalk.green('   Website:')} ${chalk.grey(radio.website)}`,
+      facebook: `${chalk.green('   Facebook:')} ${chalk.grey(radio.facebook)}`,
+      twitter: `${chalk.green('   Twitter:')} ${chalk.grey(radio.twitter)}`,
+      stream: `${chalk.green('   Stream:')} ${chalk.grey(radio.stream)}`,
     };
 
-    this.vorpal.log(`${ params.index }. ${ params.name } [${ params.id }]`);
-    this.vorpal.log(`${ params.description }`);
-    this.vorpal.log(`${ params.website }`);
-    this.vorpal.log(`${ params.facebook }`);
-    this.vorpal.log(`${ params.twitter }`);
-    this.vorpal.log(`${ params.stream }`);
+    this.vorpal.log(`${params.index}. ${params.name} [${params.id}]`);
+    this.vorpal.log(`${params.description}`);
+    this.vorpal.log(`${params.website}`);
+    this.vorpal.log(`${params.facebook}`);
+    this.vorpal.log(`${params.twitter}`);
+    this.vorpal.log(`${params.stream}`);
   }
 
   /**
    * Print the default prompt.
    */
   show() {
-    this.vorpal.delimiter(`${ baseDelimiter }$`).show();
+    this.vorpal.delimiter(`${baseDelimiter}$`).show();
   }
 
   /**
@@ -279,20 +291,20 @@ class Player {
     const radio = this.getCurrentRadio();
     if (typeof radio !== 'undefined') {
       let status;
-      if (_os2.default.platform() === 'win32') {
+      if (os.platform() === 'win32') {
         status = this.playing ? '>' : 'll';
       } else {
         status = this.playing ? '\u25B6' : '\u23F8';
       }
 
       const params = {
-        radio: _chalk2.default.cyan(radio.name),
-        status: _chalk2.default.green(status)
+        radio: chalk.cyan(radio.name),
+        status: chalk.green(status),
       };
 
-      delimiter = `${ baseDelimiter }[${ params.radio } ${ params.status }]$`;
+      delimiter = `${baseDelimiter}[${params.radio} ${params.status}]$`;
     } else {
-      delimiter = `${ baseDelimiter }$`;
+      delimiter = `${baseDelimiter}$`;
     }
 
     this.vorpal.delimiter(delimiter);
@@ -300,4 +312,27 @@ class Player {
   }
 }
 
-exports.default = Player;
+export default Player;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Player.html">Player</a></li><li><a href="Queue.html">Queue</a></li></ul><h3>Global</h3><ul><li><a href="global.html#baseDelimiter">baseDelimiter</a></li><li><a href="global.html#defaultIndex">defaultIndex</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Nov 14 2016 12:19:48 GMT+0100 (STD)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

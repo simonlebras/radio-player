@@ -8,6 +8,7 @@
     "transpile": "node_modules/.bin/gulp transpile",
     "lint": "node_modules/.bin/gulp lint",
     "test": "node_modules/.bin/jasmine",
+    "doc": "node_modules/.bin/jsdoc src -r -d docs",
     "clean": "rm -rf bin && mkdir bin"
   },
   "bin": {
