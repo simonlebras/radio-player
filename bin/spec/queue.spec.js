@@ -8,7 +8,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 describe('Queue', () => {
   beforeEach(function () {
-    this.queue = new _queue2.default(new Array(20).fill({}));
+    this.queue = new _queue2.default(Array(...Array(20)).map(() => ({})));
   });
 
   it('should be able to set the initial index to -1', function () {

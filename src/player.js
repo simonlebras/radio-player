@@ -69,10 +69,10 @@ class Player {
    */
   pause(update) {
     if (this.playing) {
-      if (this.audio != null) {
+      if (typeof this.audio !== 'undefined') {
         this.audio.kill();
       }
-      this.audio = null;
+      this.audio = undefined;
       this.playing = false;
     }
 
@@ -229,23 +229,25 @@ class Player {
   showRadio(index) {
     const radio = this.queue.getRadio(index);
 
-    const params = {
-      index: chalk.white(index + 1),
-      name: chalk.cyan(radio.name),
-      id: chalk.gray(`${radio.id}`),
-      description: `${chalk.green('   Description:')} ${chalk.grey(radio.description)}`,
-      website: `${chalk.green('   Website:')} ${chalk.grey(radio.website)}`,
-      facebook: `${chalk.green('   Facebook:')} ${chalk.grey(radio.facebook)}`,
-      twitter: `${chalk.green('   Twitter:')} ${chalk.grey(radio.twitter)}`,
-      stream: `${chalk.green('   Stream:')} ${chalk.grey(radio.stream)}`,
-    };
+    if (typeof radio !== 'undefined') {
+      const params = {
+        index: chalk.white(index + 1),
+        name: chalk.cyan(radio.name),
+        id: chalk.gray(`${radio.id}`),
+        description: `${chalk.green('   Description:')} ${chalk.grey(radio.description)}`,
+        website: `${chalk.green('   Website:')} ${chalk.grey(radio.website)}`,
+        facebook: `${chalk.green('   Facebook:')} ${chalk.grey(radio.facebook)}`,
+        twitter: `${chalk.green('   Twitter:')} ${chalk.grey(radio.twitter)}`,
+        stream: `${chalk.green('   Stream:')} ${chalk.grey(radio.stream)}`,
+      };
 
-    this.vorpal.log(`${params.index}. ${params.name} [${params.id}]`);
-    this.vorpal.log(`${params.description}`);
-    this.vorpal.log(`${params.website}`);
-    this.vorpal.log(`${params.facebook}`);
-    this.vorpal.log(`${params.twitter}`);
-    this.vorpal.log(`${params.stream}`);
+      this.vorpal.log(`${params.index}. ${params.name} [${params.id}]`);
+      this.vorpal.log(`${params.description}`);
+      this.vorpal.log(`${params.website}`);
+      this.vorpal.log(`${params.facebook}`);
+      this.vorpal.log(`${params.twitter}`);
+      this.vorpal.log(`${params.stream}`);
+    }
   }
 
   /**

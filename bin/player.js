@@ -85,10 +85,10 @@ class Player {
    */
   pause(update) {
     if (this.playing) {
-      if (this.audio != null) {
+      if (typeof this.audio !== 'undefined') {
         this.audio.kill();
       }
-      this.audio = null;
+      this.audio = undefined;
       this.playing = false;
     }
 
@@ -245,23 +245,25 @@ class Player {
   showRadio(index) {
     const radio = this.queue.getRadio(index);
 
-    const params = {
-      index: _chalk2.default.white(index + 1),
-      name: _chalk2.default.cyan(radio.name),
-      id: _chalk2.default.gray(`${ radio.id }`),
-      description: `${ _chalk2.default.green('   Description:') } ${ _chalk2.default.grey(radio.description) }`,
-      website: `${ _chalk2.default.green('   Website:') } ${ _chalk2.default.grey(radio.website) }`,
-      facebook: `${ _chalk2.default.green('   Facebook:') } ${ _chalk2.default.grey(radio.facebook) }`,
-      twitter: `${ _chalk2.default.green('   Twitter:') } ${ _chalk2.default.grey(radio.twitter) }`,
-      stream: `${ _chalk2.default.green('   Stream:') } ${ _chalk2.default.grey(radio.stream) }`
-    };
+    if (typeof radio !== 'undefined') {
+      const params = {
+        index: _chalk2.default.white(index + 1),
+        name: _chalk2.default.cyan(radio.name),
+        id: _chalk2.default.gray(`${ radio.id }`),
+        description: `${ _chalk2.default.green('   Description:') } ${ _chalk2.default.grey(radio.description) }`,
+        website: `${ _chalk2.default.green('   Website:') } ${ _chalk2.default.grey(radio.website) }`,
+        facebook: `${ _chalk2.default.green('   Facebook:') } ${ _chalk2.default.grey(radio.facebook) }`,
+        twitter: `${ _chalk2.default.green('   Twitter:') } ${ _chalk2.default.grey(radio.twitter) }`,
+        stream: `${ _chalk2.default.green('   Stream:') } ${ _chalk2.default.grey(radio.stream) }`
+      };
 
-    this.vorpal.log(`${ params.index }. ${ params.name } [${ params.id }]`);
-    this.vorpal.log(`${ params.description }`);
-    this.vorpal.log(`${ params.website }`);
-    this.vorpal.log(`${ params.facebook }`);
-    this.vorpal.log(`${ params.twitter }`);
-    this.vorpal.log(`${ params.stream }`);
+      this.vorpal.log(`${ params.index }. ${ params.name } [${ params.id }]`);
+      this.vorpal.log(`${ params.description }`);
+      this.vorpal.log(`${ params.website }`);
+      this.vorpal.log(`${ params.facebook }`);
+      this.vorpal.log(`${ params.twitter }`);
+      this.vorpal.log(`${ params.stream }`);
+    }
   }
 
   /**

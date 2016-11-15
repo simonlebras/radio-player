@@ -2,7 +2,7 @@ import Queue from '../queue';
 
 describe('Queue', () => {
   beforeEach(function () {
-    this.queue = new Queue(new Array(20).fill({}));
+    this.queue = new Queue(Array(...Array(20)).map(() => ({})));
   });
 
   it('should be able to set the initial index to -1', function () {

@@ -10,7 +10,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 describe('Radio Player', () => {
   beforeEach(function () {
-    _app.player.queue = new _queue2.default(new Array(20).fill({}));
+    _app.player.queue = new _queue2.default(Array(...Array(20)).map(() => ({})));
     _app.player.players = new Array(20).fill('');
     _app.player.playing = false;
   });
@@ -20,6 +20,17 @@ describe('Radio Player', () => {
     _app.vorpal.exec('play 5', err => {
       expect(err).toBeUndefined();
       expect(_app.player.play).toHaveBeenCalledWith(5, undefined);
+      done();
+    });
+  });
+
+  it('should be able to play a radio with a valid id', function (done) {
+    spyOn(_app.player, 'play');
+    _app.player.queue.radios = Array(...Array(20)).map(() => ({ id: '' }));
+    _app.player.queue.radios[5].id = 'rmc';
+    _app.vorpal.exec('play rmc', err => {
+      expect(err).toBeUndefined();
+      expect(_app.player.play).toHaveBeenCalledWith('rmc', undefined);
       done();
     });
   });
@@ -55,9 +66,30 @@ describe('Radio Player', () => {
     });
   });
 
+  it('should be able to play a radio with both a valid id and a valid player', function (done) {
+    spyOn(_app.player, 'play');
+    _app.player.queue.radios = Array(...Array(20)).map(() => ({ id: '' }));
+    _app.player.queue.radios[5].id = 'rmc';
+    _app.player.players = ['mplayer'];
+    _app.vorpal.exec('play rmc -p mplayer', err => {
+      expect(err).toBeUndefined();
+      expect(_app.player.play).toHaveBeenCalledWith('rmc', 'mplayer');
+      done();
+    });
+  });
+
   it('should not be able to play a radio with an invalid index', function (done) {
     spyOn(_app.player, 'play');
     _app.vorpal.exec('play 21', err => {
+      expect(err).toBeDefined();
+      expect(_app.player.play).not.toHaveBeenCalled();
+      done();
+    });
+  });
+
+  it('should not be able to play a radio with an invalid id', function (done) {
+    spyOn(_app.player, 'play');
+    _app.vorpal.exec('play rmc', err => {
       expect(err).toBeDefined();
       expect(_app.player.play).not.toHaveBeenCalled();
       done();
@@ -93,9 +125,18 @@ describe('Radio Player', () => {
     });
   });
 
-  it('should not be able to play a radio without both an invalid player and an invalid index', function (done) {
+  it('should not be able to play a radio with both an invalid player and an invalid index', function (done) {
     spyOn(_app.player, 'play');
     _app.vorpal.exec('play 21 -p mplayer', err => {
+      expect(err).toBeDefined();
+      expect(_app.player.play).not.toHaveBeenCalled();
+      done();
+    });
+  });
+
+  it('should not be able to play a radio with both an invalid player and an invalid id', function (done) {
+    spyOn(_app.player, 'play');
+    _app.vorpal.exec('play rmc -p mplayer', err => {
       expect(err).toBeDefined();
       expect(_app.player.play).not.toHaveBeenCalled();
       done();
