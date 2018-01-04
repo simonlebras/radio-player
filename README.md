@@ -1,16 +1,16 @@
-#Radio Player [![Build Status](https://travis-ci.org/simonlebras/radio-player.svg?branch=master)](https://travis-ci.org/simonlebras/radio-player)
+# Radio Player [![Build Status](https://travis-ci.org/simonlebras/radio-player.svg?branch=master)](https://travis-ci.org/simonlebras/radio-player)
 
-##Description
+## Description
 
 A command line tool to play french radios in the terminal.
 
-##Download
+## Download
 
 ```
 git clone https://github.com/simonlebras/radio-player && cd radio-player && npm install -g
 ```
 
-##Usage
+## Usage
 
 The global installation will symlink an executable script and place it in your *PATH*. To use **Radio Player**, simply type :
 
@@ -37,7 +37,7 @@ Commands :
     version                 Print Radio Player version
 ```
 
-##Requirements
+## Requirements
 
 * Node.js >= 4.0
 * At least one of the following players must be installed and available in your *PATH* :
@@ -50,11 +50,11 @@ Commands :
   * aplay
   * cmdmp3
 
-##License
+## License
 
 MIT License
 
-Copyright (c) 2016 Simon Le Bras
+Copyright (c) 2018 Simon Le Bras
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
